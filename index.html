@@ -15,7 +15,7 @@
       <form>
         <div class="mb-3">
           <label for="strings" class="form-label">Insira as strings:</label>
-          <textarea class="form-control" id="strings" placeholder="O rato roeu a roupa do rei de roma" name="strings" rows="5"></textarea>
+          <textarea class="form-control" id="strings" name="strings" rows="5"></textarea>
         </div>
         <button type="button" class="btn btn-primary" onclick="criarArray()">Criar Array</button>
       </form>
@@ -27,13 +27,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- JavaScript personalizado -->
-   function criarArray() {
-  	var strings = document.getElementById("strings").value;
-  	var array = strings.split(/\r?\n/); // a expressão regular captura tanto \r quanto \n
-  	var resultado = document.getElementById("resultado");
- 	 resultado.innerHTML = "<pre>" + JSON.stringify(array, null, 2) + "</pre>";
+    <script>
+     function criarArray() {
+  var strings = document.getElementById("strings").value;
+  var array = strings.split(/\r?\n/); // a expressão regular captura tanto \r quanto \n
+  var resultado = document.getElementById("resultado");
+  resultado.innerHTML = "<pre>" + JSON.stringify(array, null, 2) + "</pre>";
 }
-
     </script>
   </body>
 </html>
