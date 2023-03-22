@@ -30,7 +30,7 @@
     <script>
      function criarArray() {
   var strings = document.getElementById("strings").value;
-  var array = strings.split(/\r?\n/); // a expressão regular captura tanto \r quanto \n
+  var array = strings.split(/\r?\n|\s+/); // a expressão regular captura tanto \r quanto \n e adiciona \s+ para capturar espaços em branco
   var resultado = document.getElementById("resultado");
   resultado.innerHTML = "<pre>" + JSON.stringify(array, null, 2) + "</pre>";
 }
